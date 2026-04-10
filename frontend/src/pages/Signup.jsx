@@ -81,7 +81,7 @@ export default function Signup() {
       if (Object.keys(errs).length) { setErrors(errs); return; }
       setErrors({}); setServerError(""); setLoading(true);
       try {
-         await axios.post("http://localhost:3000/signup", {
+         await axios.post("https://college-management-system-ljbm.onrender.com/signup", {
             name: form.name, email: form.email,
             password: form.password, role: form.role,
             enrollmentNo: form.enrollmentNo,

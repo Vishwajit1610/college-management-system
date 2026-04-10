@@ -75,7 +75,7 @@ export default function Login() {
       if (Object.keys(errs).length) { setErrors(errs); return; }
       setErrors({}); setServerError(""); setLoading(true);
       try {
-         const res = await axios.post("http://localhost:3000/login", { email, password });
+         const res = await axios.post("https://college-management-system-ljbm.onrender.com", { email, password });
          localStorage.setItem("token", res.data.token);
          localStorage.setItem("role", res.data.role);
          res.data.role === "admin" ? navigate("/admin") : navigate("/dashboard");
