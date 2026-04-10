@@ -1,0 +1,7 @@
+node_modules
+.env
+notes.md
+.vscode
+dist
+frontend/node_modules
+frontend/dist
